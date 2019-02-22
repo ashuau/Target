@@ -1,0 +1,66 @@
+InputArray = { 12, 4, 11, 10, 5 , 1}
+
+{1,4,5,10,11,12}
+
+i and j --> indexes in the array
+such that {(a[i]-i)-(a[j]-j)} is maxiumum
+
+such that {(a[i]-a[j])} is maximum
+
+
+ maxFunction (int arr[])
+ {
+     int length = arr.length;
+
+     int j = 1;
+     int maxSum = 0;
+     HashMap map = new HashMap();
+     for (int i = 0; i < length; i++)
+     {
+         if (j < length)
+         {
+         int temp = ((a[i] - i) - (a[j] - j));
+
+         if (maxSum < temp)
+         {
+             maxSum = temp;
+             map.put(i,j);
+         }
+
+         j++;
+         }
+     }
+ }
+
+ maxFunction2(int arr[])
+ {
+     int max = 0 , min = arr[0];
+     int maxIndex =0, minIndex = 0;
+     for (int i = 0; i< arr.length; i++)
+     {
+         if (arr[i] > max)
+         {
+          max = arr[i];
+          maxIndex = i;
+         }
+
+
+         if (arr[i] < min){
+          min = arr[i];
+          minIndex = i;
+          }
+     }
+
+ }
+
+
+ EmpID EmpName EmpSalary MgrId
+ 1     ABC     10000     -
+ 2     DEF      9000     1
+ 3     GHI     11000     1
+ 4     JKL      7000     2
+ 5     MNO     13000     3
+
+
+
+ select empid, empname,empsalary from employee e1 self join employee e2 on e1.mgrid = e2.empid where e2.salary > e1.salary
