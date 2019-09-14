@@ -4,9 +4,9 @@ import java.util.Arrays;
 
 public class ClosestNumberOfGivenNumberInArray {
     public static void main(String[] args) {
-        int array [] = {2,5,6,7,8,8,9};
+        int[] array = {2,5,6,7,8,8,9};
         int no = 4;
-        System.out.println(findClosestForSortedArray(array,no));
+        System.out.printf("closest number of %d :: %d ",no, findClosestForSortedArray(array,no));
 
        /* array = new int[]{7, 2, 6, 5, 8, 9, 8};
         no = 6;
@@ -14,7 +14,7 @@ public class ClosestNumberOfGivenNumberInArray {
 
     }
 
-    private static int findClosestForUnSortedArray(int arr[], int number) {
+    private static int findClosestForSortedArray(int[] arr, int number) {
 
         int len = arr.length;
         int smallestDiff = Math.abs(number - arr[0]);
@@ -33,7 +33,7 @@ public class ClosestNumberOfGivenNumberInArray {
 
     }
 
-    private static int findClosestForSortedArray(int arr[], int number){
+    private static int findClosestForUnSortedArray(int arr[], int number){
         Arrays.sort(arr);
         int len = arr.length;
 
@@ -71,8 +71,8 @@ public class ClosestNumberOfGivenNumberInArray {
         return arr[mid];
     }
 
-    public static int getClosest(int val1, int val2,
-                                 int target)
+    private static int getClosest(int val1, int val2,
+                                  int target)
     {
         if (target - val1 >= val2 - target)
             return val2;

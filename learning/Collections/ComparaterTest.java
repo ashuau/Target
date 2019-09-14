@@ -1,6 +1,5 @@
 package learning.Collections;
 
-import org.jetbrains.annotations.NotNull;
 
 import java.util.*;
 
@@ -52,7 +51,7 @@ class Student implements Comparable<Student> {
     }
 
     @Override
-    public int compareTo(@NotNull Student o) {
+    public int compareTo(Student o) {
 
         /*if (this.name.equals(o.name)) {
             return this.id - o.marks;
