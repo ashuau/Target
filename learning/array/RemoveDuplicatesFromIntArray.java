@@ -9,7 +9,7 @@ public class RemoveDuplicatesFromIntArray {
                 {1, 1, 2, 2, 3, 4, 5},
                 {1, 1, 1, 1, 1, 1, 1},
                 {1, 2, 3, 4, 5, 6, 7},
-                {1, 2, 1, 1, 1, 1, 1},};
+                {1, 2, 1, 1, 1, 1, 1}};
 
         for (int[] input : test) {
             System.out.println("Array with Duplicates       : " + Arrays.toString(input));

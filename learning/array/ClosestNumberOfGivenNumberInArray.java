@@ -19,7 +19,7 @@ public class ClosestNumberOfGivenNumberInArray {
         int len = arr.length;
         int smallestDiff = Math.abs(number - arr[0]);
         int targetIndex = 0;
-
+        // loop through first element
         for (int i = 1; i < len; i++) {
 
             if (smallestDiff > Math.abs(number - arr[i]))
@@ -44,7 +44,7 @@ public class ClosestNumberOfGivenNumberInArray {
             return arr[len - 1];
         }
 
-        int  temp = -1, mid = 0;
+        int mid = 0;
         int start = 0;
 
             while (start < len) {

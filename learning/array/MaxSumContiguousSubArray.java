@@ -2,13 +2,12 @@ package learning.array;
 
 public class MaxSumContiguousSubArray {
     public static void main(String[] args) {
-        int arr [] = {-2, -3, 2, -1, -2, 1, 5, -1,19,20,21};
+        int[] arr = {-2, -3, 2, -1, -2, 1, 5, -1,19,20,21};
         int length = arr.length;
 
         int max_so_far = 0,max_ending_here = 0;
         int startIndex = -1, endIndex = -1,s = 0;
 
-        boolean negativeFound = false;
         // Kadane Algorithm
 
         for (int i = 0; i< length; i++)
@@ -17,15 +16,8 @@ public class MaxSumContiguousSubArray {
             if (max_so_far < max_ending_here)
             {
                 max_so_far = max_ending_here;
-               /* if (startIndex == -1 || negativeFound)
-                {*/
-                    startIndex = s;
-                  /*  negativeFound = false;
-                }
-                else
-                {*/
-                    endIndex = i;
-              //  }
+                startIndex = s;
+                endIndex = i;
             }
             else if (max_ending_here < 0 )
             {

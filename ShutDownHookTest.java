@@ -8,6 +8,7 @@ public class ShutDownHookTest
         System.out.println("Application Terminating ...");
         Thread.sleep(1000);// Shutdownhook will be called unless
         //forcefully termination done
-        System.exit(0); // Shutdown hook will be called
+        System.exit(1); // Shutdown hook will be called
+        System.out.println("hello world");
     }
 }

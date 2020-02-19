@@ -12,13 +12,9 @@ public class CountPairsInArrayWhoseDifferenceIsK {
 
         // Complete the pairs function below.
            static int pairs(int target, int[] arr) {
-           long startTime =  System.nanoTime();
-            System.out.println("start time ::"+startTime);
             int count = 0;
-          /* List items = Arrays.stream(arr).boxed().collect(Collectors.toList());
-            System.out.println(items);*/
 
-               Arrays.sort(arr);
+            Arrays.sort(arr);
 
                int i = 0;
                int startIndex = 0;
@@ -36,11 +32,6 @@ public class CountPairsInArrayWhoseDifferenceIsK {
                 else
                     startIndex++; // else moving forward with start index
             }
-
-            long endTime = System.nanoTime();
-            System.out.println("end time ::"+endTime);
-            long diff = endTime - startTime;
-            System.out.println("time ::"+diff/1000000.0);
             return count;
 
         }
@@ -48,13 +39,13 @@ public class CountPairsInArrayWhoseDifferenceIsK {
         public static void main(String[] args) {
             int k = 2;
 
-            int[] arr = {1,4,8,10,12};
+            int[] arr = {1,4,8,10,10};
 
             int result = pairs(k, arr);
 
             System.out.println("result:: "+result);
 
-        }
+           }
 }
 
 

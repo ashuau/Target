@@ -2,7 +2,7 @@ package learning.array;
 
 public class SortArrayContaining012 {
     public static void main(String[] args) {
-        int arr [] = {1,0,2,2,0,1,2,0};
+        int[] arr = {1,0,2,2,0,1,2,0};
         sort012(arr);
         for (int a : arr)
         {
@@ -14,7 +14,7 @@ public class SortArrayContaining012 {
 
         int high = arr.length -1;
         int start = 0;
-        int temp = 0;
+        int temp;
         int low = 0;
             while (start <= high) {
                 switch (arr[start]) {
