@@ -26,7 +26,7 @@ public class KthLargestElement {
 }*/
 
     public static void main(String[] args) {
-        int arr [] = {10,5,12,50,36,9,32};
+        int[] arr = {10,5,12,50,36,9,32};
         KthLargestElement heap = new KthLargestElement(arr);
         heap.printHeap();
         heap.buildMaxHeap();

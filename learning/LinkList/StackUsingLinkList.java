@@ -36,7 +36,6 @@ public class StackUsingLinkList {
             stack = node;
         }
         else {
-
             node.next = stack;
             stack = node;
         }

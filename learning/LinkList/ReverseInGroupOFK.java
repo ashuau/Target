@@ -1,5 +1,9 @@
 package learning.LinkList;
 
+/**
+ *  input :: 10=>20=>30=>40=>50 and K = 3
+ * Output :: 30=>20=>10=>50=>40
+ */
 public class ReverseInGroupOFK {
 
     public static void main(String[] args) {
@@ -20,12 +24,12 @@ public class ReverseInGroupOFK {
             System.out.print(temp.data+"=>");
             temp = temp.next;
         }
+        // reversing in a group of K
         head =    reverse(head,k);
 
         System.out.println();
-
+    // Printing the reversed list
      while (head != null) {
-
          System.out.print(head.data+"=>");
          head = head.next;
      }
@@ -48,7 +52,7 @@ public class ReverseInGroupOFK {
             current = next;
             count++;
         }
-
+        // reversing for next group of K
         if (next != null) {
 
             head.next = reverse(next,k);

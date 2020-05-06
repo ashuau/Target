@@ -24,9 +24,7 @@ public class FindLoop {
             }
 
         }
-
         slow = head;
-
         while (fast != null){
             slow = slow.next;
             fast = fast.next;
@@ -35,11 +33,6 @@ public class FindLoop {
                 System.out.println("loop ::"+slow.data);
                 break;
             }
-
-
         }
-
-
-
     }
 }

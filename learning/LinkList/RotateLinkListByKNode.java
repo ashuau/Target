@@ -67,6 +67,6 @@ public class RotateLinkListByKNode {
       newHead = kthNode.next;
 
         kthNode.next = null;
-        return newHead == null ? head : newHead;
+        return newHead;
     }
 }

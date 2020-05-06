@@ -34,6 +34,7 @@ public class RemoveDuplicatesFromListHorizontallyAndVerticallyInHashMap {
         System.out.println(map);*/
         Collection <List<Integer>> test = map.values();
 
+
       /*  BooleanTypeOnBiwiseOperator.forEach(list -> list.forEach(v -> {
 
             if (set.contains(v)) {

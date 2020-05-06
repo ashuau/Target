@@ -3,25 +3,23 @@ package learning.mathematical;
 
 public class GenerateValidParenthesis {
     public static void main(String[] args) {
-        int n = 2;
+        int n = 3;
       //  printParentheses(n);
         generate(n,n,"");
     }
 
-        public static void generate(int openP, int closeP, String string) {
-            if (openP == 0 && closeP == 0) // mean all opening and closing in
-                // string,
-                // print it
-                System.out.println(string);
+        public static void generate(int openP, int closeP, String temp) {
+            if (openP == 0 && closeP == 0) // mean all opening and closing in string, print it.
+                System.out.println(temp);
             if (openP > closeP) // means closing parentheses is more than open ones
                 return;
             if (openP > 0)
-                generate(openP - 1, closeP, string + "("); // put ( and
+                generate(openP - 1, closeP, temp + "("); // put ( and
             // reduce
             // the count by
             // 1
             if (closeP > 0)
-                generate(openP, closeP - 1, string + ")"); // put ) and
+                generate(openP, closeP - 1, temp + ")"); // put ) and
             // reduce
             // the count by
             // 1

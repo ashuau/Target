@@ -11,8 +11,8 @@ public class MinimumNumberFromGivenPatternOFIAndD {
 
    static void PrintMinNumberForPattern(String seq)
     {
-        String result="";
-        Stack<Integer> stk = new Stack();
+        StringBuilder result= new StringBuilder();
+        Stack<Integer> stk = new Stack<>();
         for (int i = 0; i <= seq.length(); i++)
         {
             stk.push(i + 1);
@@ -21,7 +21,7 @@ public class MinimumNumberFromGivenPatternOFIAndD {
             {
                 while (!stk.empty())
                 {
-                    result +=  String.valueOf(stk.pop());
+                    result.append(stk.pop());
                 }
             }
         }

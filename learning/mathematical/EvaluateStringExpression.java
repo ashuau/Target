@@ -25,11 +25,9 @@ public class EvaluateStringExpression
             // Current token is a number, push it to stack for numbers
             if (tokens[i] >= '0' && tokens[i] <= '9')
             {
-                StringBuffer sbuf = new StringBuffer();
-                int k = i;
+                StringBuilder sbuf = new StringBuilder();
                 while (i < tokens.length && tokens[i] >= '0' && tokens[i] <= '9') {
                     sbuf.append(tokens[i++]);
-
                 }
                 values.push(Double.parseDouble(sbuf.toString()));
             }
@@ -101,7 +99,7 @@ public class EvaluateStringExpression
 
     public static void main(String[] args)
     {
-        Scanner in = new Scanner(System.in);
+       /* Scanner in = new Scanner(System.in);
         System.out.println("Enter number of testcases :");
         int testCaseNo = in.nextInt();
         List result = new ArrayList();
@@ -117,11 +115,15 @@ public class EvaluateStringExpression
 
         for (int i = 0; i < result.size(); i++) {
             System.out.println("case #"+(i+1)+": "+result.get(i));
-        }
-      /*  System.out.println(EvaluateStringExpression.evaluate("10 + 2 ^ 3"));
-        System.out.println(EvaluateStringExpression.evaluate("100 * 2 + 12"));
-        System.out.println(EvaluateStringExpression.evaluate("100 * ( 2 + 12 )"));
-        System.out.println(EvaluateStringExpression.evaluate("100 * ( 2 + 12 ) / 14"));*/
+        }*/
+       try {
+           System.out.println(EvaluateStringExpression.evaluate("10 + 2 ^ 3"));
+           System.out.println(EvaluateStringExpression.evaluate("100 * 2 + 12"));
+           System.out.println(EvaluateStringExpression.evaluate("100 * ( 2 + 12 )"));
+           System.out.println(EvaluateStringExpression.evaluate("100 * ( 2 + 12 ) / 14"));
+       }catch (Exception e){
+           e.printStackTrace();
+       }
     }
 }
 

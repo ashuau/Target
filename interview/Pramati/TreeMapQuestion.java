@@ -23,11 +23,10 @@ public class TreeMapQuestion {
             }
         }
         Set set = map.entrySet();
-        Iterator i = set.iterator();
 
         // Traverse map and print elements
-        while (i.hasNext()) {
-            Map.Entry me = (Map.Entry)i.next();
+        for (Object o : set) {
+            Map.Entry me = (Map.Entry) o;
             System.out.print(me.getKey() + ": ");
             System.out.println(me.getValue());
         }

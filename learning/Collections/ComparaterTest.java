@@ -106,7 +106,6 @@ public class ComparaterTest {
 
         Arrays.sort(sArray);
         System.out.println("Default Sorting of Student list:\n"+Arrays.toString(sArray));
-
         // sorting using name
 
        /* Arrays.sort(sArray,Student.nameComparator);

@@ -42,17 +42,15 @@ public class LRUCache {
         {
             dq.remove(x);
         }
-        dq.push(x);
+        dq.addFirst(x); // equivalent to push
         set.add(x);
     }
 
     // display contents of cache
     public void display()
     {
-        Iterator<Integer> itr = dq.iterator();
-        while(itr.hasNext())
-        {
-            System.out.print(itr.next()+" ");
+        for (Integer integer : dq) {
+            System.out.print(integer + " ");
         }
     }
 

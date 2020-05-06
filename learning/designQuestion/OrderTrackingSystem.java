@@ -7,17 +7,17 @@ import java.util.Date;
 public class OrderTrackingSystem {
 
 
-    public static interface Observer<T> {
-        public void onChange(T subject);
+    public interface Observer<T> {
+        void onChange(T subject);
     }
 
-    public static interface Subject<T>{
-        public boolean registerObserver(Observer<T> observer);
-        public void notifyAllObservers();
-        public boolean deleteObserver(Observer<T> observer);
+    public interface Subject<T>{
+        boolean registerObserver(Observer<T> observer);
+        void notifyAllObservers();
+        boolean deleteObserver(Observer<T> observer);
     }
 
-    public static enum OrderStatus {
+    public enum OrderStatus {
         Received("Received"),
         Assigned("Assigned"),
         Delivered("Delivered"),
@@ -49,7 +49,7 @@ public class OrderTrackingSystem {
         private DeliveryBoy deliveryBoy;
 
         public Order(int id, Date expectedTime){
-            this.observers = new ArrayList<Observer<Order>>();
+            this.observers = new ArrayList<>();
             this.id = id;
             this.expectedTime = expectedTime;
         }
@@ -110,11 +110,11 @@ public class OrderTrackingSystem {
         }
 
         @Override
-        public void onChange(Order subject) {
+        public void onChange(Order order) {
 
             String msg = String.format("Order #%d status changed - %s",
-                    subject.getId(),
-                    subject.status.description);
+                    order.getId(),
+                    order.status.description);
             System.out.println(msg);
         }
 

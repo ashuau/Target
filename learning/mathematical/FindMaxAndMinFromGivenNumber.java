@@ -62,7 +62,6 @@ public class FindMaxAndMinFromGivenNumber{
 
             numbers.add(str);
         }
-
         else {
 
             for (int i = start; i <= end; i++) {

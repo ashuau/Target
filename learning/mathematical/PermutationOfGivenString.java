@@ -6,16 +6,16 @@ import java.util.Set;
 
 public class PermutationOfGivenString {
     public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
-        String str = in.next();
+        //Scanner in = new Scanner(System.in);
+        String str = "Hell";
         Set <String> strs = new HashSet<>();
         printPermutation(str,0,str.length()-1,strs);
-        System.out.println(strs);
+        System.out.println("strings :: "+strs);
     }
 
     private static void printPermutation(String str,int startIndex,int endIndex, Set <String>strs) {
         if (startIndex == endIndex){
-            System.out.print(str +"\t");
+           // System.out.print(str +"\t");
             strs.add(str);
         }
         else{
@@ -28,12 +28,12 @@ public class PermutationOfGivenString {
         }
 
     }
-    private static String swap(String str,int startindex,int index){
+    private static String swap(String str,int startindex,int currentIndex){
         char temp;
         char[] charArray = str.toCharArray();
         temp = charArray[startindex] ;
-        charArray[startindex] = charArray[index];
-        charArray[index] = temp;
+        charArray[startindex] = charArray[currentIndex];
+        charArray[currentIndex] = temp;
         return String.valueOf(charArray);
     }
 }
