@@ -1,10 +1,10 @@
 package learning.designQuestion;
 
-import java.util.HashMap;
-
 /*
  * This class represents the system
  */
+
+import java.util.HashMap;
 
 class OnlineReaderSystem {
     private Library library;

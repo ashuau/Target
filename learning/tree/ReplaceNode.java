@@ -8,7 +8,8 @@ package learning.tree;
 public class ReplaceNode {
 
     /*
-    Input :          1
+    Input :
+    1
                /   \
               2     3
             /  \  /  \

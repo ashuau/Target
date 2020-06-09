@@ -21,7 +21,7 @@ class ExceptionHandler implements Thread.UncaughtExceptionHandler
     public void uncaughtException(Thread t, Throwable e)
     {
         System.out.printf("An exception has been captured\n");
-        System.out.printf("Thread: %s\n", t.getId());
+        System.out.printf("Thread: %s\n", t.getName());
         System.out.printf("Exception: %s: %s\n", e.getClass().getName(), e.getMessage());
         System.out.printf("Stack Trace: \n");
         e.printStackTrace();
@@ -37,11 +37,12 @@ public class UnCaughtExceptionHandlerTest
 
         Thread thread = new Thread(task);
         thread.start();
-        System.out.println(thread.isAlive());
+        System.out.println("alive :: "+thread.isAlive());
+        System.out.println(thread.getName());
         thread.join();
-        System.out.println(thread.isAlive());
+        System.out.println("alive :: "+thread.isAlive());
 
-        Thread.sleep(1000);
+        Thread.sleep(5000);
         System.out.println(Thread.currentThread().getName());
     }
 }
